@@ -1,0 +1,11 @@
+{   "gpu": 0,
+    "save_path": "work_dir/sample/",
+    "ann_file": "test.csv",
+    "dataroot": "",
+    "dataset_type": "TestDataset",
+    "model_type": "UNet5",
+    "in_channels": 2,
+    "out_channels": 1,
+    "eval_metric": ["MAE", "corrcoef"],
+    "pretrained": "model.pth"
+}

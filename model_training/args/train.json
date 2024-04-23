@@ -1,0 +1,27 @@
+{
+    "save_path": "work_dir/sample/",
+    "args": null,
+    "cpu": false,
+    "dataroot": "./training_set/sample",
+    "ann_file": "train.csv",
+    "dataset_type": "TrainDataset",
+    "batch_size": 1170,
+    "model_type": "UNet5",
+    "pretrained": null,
+    "in_channels": 2,
+    "out_channels": 1,
+    "pretrained":"model.pth",
+    "max_iters": 40000,
+    "aug_pipeline": [
+        "Flip"
+    ],
+    "lr": 0.0005,
+    "weight_decay": 0,
+    "loss_type": "L1_CCLoss",
+    "plot": false,
+    "eval_metric": [
+        "MAE",
+        "corrcoef"
+    ],
+    "test_mode": false
+}
