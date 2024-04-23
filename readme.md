@@ -9,7 +9,7 @@ SoC Analyser是一个拥有高性能的SoC静态压降大数据分析系统。�
  <img src="img/process.png" width="800px">
 </div>
 
-*<center>SoC Analyser 工作流程</center>*
+*<center>SoC Analyzer 工作流程</center>*
 SoC Analyser能够在5种主流芯片设计的静态压降预测任务中获得0.0008平均误差及92%相关系数，并且拥有比静态分析工具更快的运行速度。
 
 你可以通过以下步骤复现我们的实验。
@@ -20,7 +20,8 @@ SoC Analyser能够在5种主流芯片设计的静态压降预测任务中获得0
 ## :sunny:环境配置
 1. 进入项目目录
 ```shell
-cd soc-analyser
+git clone https://github.com/HeartyHaven/soc-Analyzer
+cd soc-Analyzer
 ```
 2. 安装依赖：创建环境
 ```shell
@@ -33,14 +34,13 @@ pip install --upgrade pip # enable PEP 660 support
 pip install -r requirements.txt
 ```
 ## :rocket:数据获取
-我们使用行芯EMIR分析工具GloryBolt对集成电路网表的抽取结果进行静态压降分析。我们提供了一个拥有7322条网表抽取结果的数据集，你可以通过[百度网盘]()下载。
+我们使用行芯EMIR分析工具GloryBolt对集成电路网表的抽取结果进行静态压降分析。我们提供了一个拥有7322条网表抽取结果的数据集，你可以通过[百度网盘](https://pan.baidu.com/s/1Uz7mPTMExlROH5i5W4sN2Q?pwd=8xa8)下载:请下载所有的tar.gz文件并且将所有下载内容保存在同一个文件夹dataset中。
 
 下载完毕后，执行
 ```shell
-tar -zxvf EMIR_Dataset.zip
+cd dataset
+for file in *.tar.gz; do tar -xzvf "$file"; done
 ```
-
-**无需解压EMIR_Dataset目录下的.gz文件。**
 
 ## :hourglass:数据预处理
 #### 输入数据
