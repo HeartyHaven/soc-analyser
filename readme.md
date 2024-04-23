@@ -9,7 +9,9 @@ SoC Analyser是一个拥有高性能的SoC静态压降大数据分析系统。�
  <img src="img/process.png" width="800px">
 </div>
 
-*<center>SoC Analyzer 工作流程</center>*
+<center>SoC Analyzer 工作流程</center>
+
+
 
 SoC Analyser能够在5种主流芯片设计的静态压降预测任务中获得0.0008平均误差及92%相关系数，并且拥有比静态分析工具更快的运行速度。
 
