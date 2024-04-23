@@ -9,7 +9,6 @@ SoC Analyser是一个拥有高性能的SoC静态压降大数据分析系统。�
  <img src="img/process.png" width="800px">
 </div>
 
-<center>SoC Analyzer 工作流程</center>
 
 
 
