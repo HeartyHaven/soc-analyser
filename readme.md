@@ -92,3 +92,5 @@ python model_training/train.py --args model_training/args/train.json
 python model_training/test.py --args model_training/args/test.json --pretrained path/to/your/model.pth
 ```
 程序将输出详细的模型评估信息，包括在不同设计上的平均绝对误差与相关系数。你将在`save_path`路径下获取样本的电压降分布。
+## :moon: 致谢
+本项目代码的实现参考了[CircuitNet](https://github.com/circuitnet/CircuitNet)和[IREDGe](https://github.com/VidyaChhabria/ThermEDGe-and-IREDGe.git)项目的实现，我们对此卓越的工作表示诚挚感谢！
