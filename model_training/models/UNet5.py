@@ -147,7 +147,6 @@ class Decoder(nn.Module):
                 nn.Conv2d(4, out_dim, 3, 1, 1),
                 nn.Sigmoid()
                 )
-        # self.dense = Dense(128,activation='relu',kernel_regularizer=l2(reg_rate), bias_regularizer=l2(reg_rate))
         
 
     def init_weights(self):
@@ -158,23 +157,17 @@ class Decoder(nn.Module):
         d2 = self.upc1(d1)
         
         d2 = self.conv2(d2)#32,1/4
-        # print('vals0 shape:',vals[0].shape)
-        # print('vals1 shape:',vals[1].shape)
-        # print('vals2 shape:',vals[2].shape)
-        # print('vals3 shape:',vals[3].shape)
-        # print('vals4 shape:',vals[4].shape)
+        
         d3 = self.upc2(torch.cat((d2,vals[1]),dim=1))
         
         d3 = self.conv3(d3)#16,1/2
-        # print('d3 shape:',d3.shape)
-        # print('vals2 shape:',vals[2].shape)
+       
 
         d4 = self.upc3(torch.cat((d3, vals[2]), dim=1))
-        d4 = self.conv4(d4)  # shortpath from 2->7#4,1
-        # print('d4 shape:',output.shape)
+        d4 = self.conv4(d4) 
         
         d5 = self.upc4(torch.cat((d4, vals[3]), dim=1))
-        output = self.conv5(d5)  # shortpath from 2->7#4,1
+        output = self.conv5(d5)
 
         return output
 
