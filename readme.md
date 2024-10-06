@@ -1,4 +1,3 @@
-Sure! Here's the translated Markdown:
 
 ---
 
