@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ## :rocket: Data Acquisition
 
-We use the GloryBolt EMIR analysis tool to perform static voltage drop analysis on extracted results of integrated circuit netlists. A dataset with 7322 netlist extraction results is provided, which you can download from [Baidu Netdisk](https://pan.baidu.com/s/1Uz7mPTMExlROH5i5W4sN2Q?pwd=8xa8): Download all tar.gz files and save them in the same folder named `dataset`.
+We use the GloryBolt EMIR analysis tool to perform static voltage drop analysis on extracted results of integrated circuit netlists. A sample dataset with netlist extraction results is provided, which you can download from [Baidu Netdisk](https://pan.baidu.com/s/1B9Hl2PHJ5f5KW-vpms3Vfw?pwd=75tx): Download all tar.gz files in the folder *icisc_data/data/* and save them in the same folder named `dataset`.
 
 After downloading, execute
 ```shell
@@ -91,7 +91,7 @@ This generates index files `train.csv` and `test.csv`.
 
 Pre-trained model parameters `model.pth` are provided and can be used directly for testing.
 
-**Training from Scratch:** Use `batch_size`=1170 to train the SoC Analyser model for about 12 hours on 8*RTX 4090 devices. We observed that `batch_size` is positively correlated with training effectiveness, so reducing `batch_size` may degrade performance.
+**Training from Scratch:** ~~Use `batch_size`=1170 to train the SoC Analyser model for about 12 hours on 8*RTX 4090 devices.~~ (Unfortunately the whole training set with 7322 netlist extraction samples are no longer available.) We observed that `batch_size` is positively correlated with training effectiveness, so reducing `batch_size` may degrade performance.
 
 Before training, modify the parameters `save_path`, `ann_file`, `data_root` in `args/train.json` to specify the result save path, `train.csv` path, and the path where the extracted feature files are located.
 
